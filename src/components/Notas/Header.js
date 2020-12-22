@@ -9,7 +9,7 @@ const Header = ({ user,note }) => {
   const { logoutUser } = useContext(authContext);
 
   return (
-    <header className="bg-gray-900 shadow-inner w-full  shadow-lg py-4 border-b-4 border-green-600">
+    <header className="bg-gray-900 shadow-inner w-full  shadow-lg py-4 border-b-4 border-green-500">
       <div className="flex justify-between ">
         {/**TODO: Usuario */}
         {/** TODO: si quieres redireccionar a la misma pagina to='#' */}
@@ -35,7 +35,7 @@ const Header = ({ user,note }) => {
         <div className="mt-4 mr-4 md:mt-0 md:mr-0 ">
           <div className="flex md:flex-no-wrap">
           {
-            note !== 'true' ? <Link to="/crear-nota" type="button" className="mr-8 md:mr-12 ">
+            note !== 'true' ? <Link to="/crear-nota" type="button" className="mr-8 md:mr-12">
               <BiPlus color="white" className="w-auto h-10" />
             </Link>  : <Link to="/notas" type="button" className="mr-8 md:mr-12">
               <BiShare color="white" className="w-auto h-10" />

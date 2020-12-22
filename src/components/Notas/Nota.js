@@ -21,20 +21,20 @@ const Nota = ({ nota }) => {
           <Link to="editar-nota">
             <button
               onClick={() => handleActualizarNota(nota)}
-              className="px-3 py-3 md:text-sm font-semibold ml-2 flex"
+              className="px-3 py-3 md:text-sm font-semibold ml-2 flex focus:outline-none"
             >
               Editar nota
             </button>
           </Link>
           <button
             onClick={() => handleEliminarNota(nota)}
-            className=" px-3 py-3 "
+            className=" px-3 py-3 focus:outline-none"
           >
             <BiX className="w-auto h-8 md:h-6" />
           </button>
         </div>
         <div className="px-5">
-          <div className="font-bold text-lg mb-1 ">{nota.name}</div>
+          <div className="font-semibold text-lg mb-1 ">{nota.name}</div>
           <p className="text-gray-900 text-base">{nota.description}</p>
         </div>
       </div>

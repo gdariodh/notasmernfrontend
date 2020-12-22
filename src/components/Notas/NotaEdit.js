@@ -56,7 +56,7 @@ const NotaEdit = () => {
                     </p>
 
                     {formik.touched.name && formik.errors.name && (
-                    <div className="flex justify-center my-2 text-gray-900 p-2">
+                    <div className="flex justify-center my-2 text-red-600 p-2">
                       <span className="font-semibold">
                         {formik.errors.name}
                       </span>
@@ -82,13 +82,13 @@ const NotaEdit = () => {
                             value={values.name}
                             id="name"
                             type="text"
-                            className=" text-gray-800 text-base bg-yellow-300 w-full p-4 font-semibold "
+                            className=" text-gray-900 text-base bg-yellow-300 w-full p-4  focus:outline-none"
                           />
                         </div>
                         <div className="px-6 py-4">
                           <label
                             htmlFor="description"
-                            className=" text-xl flex flex-wrap justify-center text-gray-900 "
+                            className=" text-xl flex flex-wrap justify-center text-gray-900 focus:outline-none"
                           >
                             Contenido
                           </label>
@@ -97,7 +97,7 @@ const NotaEdit = () => {
                             onBlur={handleBlur}
                             id="description"
                             type="text"
-                            className=" text-gray-900 text-base bg-yellow-300 w-full p-4 font-semibold"
+                            className=" text-gray-900 text-base bg-yellow-300 w-full p-4  focus:outline-none"
                             value={
                               values.description !== ""
                                 ? values.description
@@ -108,7 +108,7 @@ const NotaEdit = () => {
 
                         <input
                           type="submit"
-                          className="bg-yellow-300  w-full p-2 text-gray-900 uppercase font-semibold"
+                          className="bg-yellow-300  w-full p-2 text-gray-900 uppercase font-semibold focus:outline-none"
                           value="Editar nota &#128204;"
                         />
                       </form>

@@ -36,7 +36,7 @@ const NotaCreate = () => {
           {/** TODO: Fondo */}
           <div className="bg-gray-200 h-screen flex flex-col">
             {/** Header  */}
-            <Header user={user} note='true' />
+            <Header user={user} note="true" />
             <div className="w-full h-full flex-wrap shadow-inner">
               <div className="p-2 mt-2 bg-gray-200">
                 {/** TODO: Panel del usuario de crearNotas */}
@@ -46,7 +46,7 @@ const NotaCreate = () => {
                   </p>
 
                   {formik.touched.name && formik.errors.name && (
-                    <div className="flex justify-center my-2 text-gray-900 p-2">
+                    <div className="flex justify-center my-2 text-red-600 p-2">
                       <span className="font-semibold">
                         {formik.errors.name}
                       </span>
@@ -71,7 +71,7 @@ const NotaCreate = () => {
                           value={values.name}
                           id="name"
                           type="text"
-                          className=" text-gray-800 text-base bg-yellow-300 w-full p-4 font-semibold "
+                          className=" text-gray-900 text-base bg-yellow-300 w-full p-4 focus:outline-none"
                         />
                       </div>
                       <div className="px-6 py-4">
@@ -87,13 +87,13 @@ const NotaCreate = () => {
                           value={values.description}
                           id="description"
                           type="text"
-                          className=" text-gray-800 text-base bg-yellow-300 w-full p-4 font-semibold"
+                          className=" text-gray-900 text-base bg-yellow-300 w-full p-4  focus:outline-none"
                         />
                       </div>
                       {values.name !== "" && (
                         <input
                           type="submit"
-                          className="bg-yellow-300  w-full p-2 text-gray-900 uppercase font-semibold"
+                          className="bg-yellow-300  w-full p-2 text-gray-900 uppercase font-semibold focus:outline-none"
                           value="Crear nota &#128204;"
                         />
                       )}

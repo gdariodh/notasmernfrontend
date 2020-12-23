@@ -108,7 +108,6 @@ const NotaEdit = () => {
                             }
                           />
                         </div>
-                        s
                         <input
                         data-cy='input-submit-editar-nota'
                           type="submit"

@@ -29,7 +29,7 @@ const Banner = ({ crearCuenta }) => {
           </div>
 
           <div>
-            <Link to="/home" className='text-xl'>
+            <Link data-cy='ir-login' to="/home" className='text-xl'>
               <p className="text-white opacity-75 font-semibold mt-6 text-center">
                 ¿Ya tienes una cuenta? &#128073;
                 <span className="font-bold text-white ml-2 underline">

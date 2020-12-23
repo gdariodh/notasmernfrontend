@@ -5,6 +5,7 @@ const Login = () => {
 
   return (
     <form
+      data-cy='form-login'
       onSubmit={handleSubmit}
       className="bg-white rounded shadow-lg px-8 pt-6 pb-8 mb-4"
     >
@@ -16,6 +17,7 @@ const Login = () => {
           Email
         </label>
         <input
+          data-cy='input-email'
           onChange={handleChange}
           onBlur={handleBlur}
           value={values.email}
@@ -25,7 +27,7 @@ const Login = () => {
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         />
         {formik.touched.email && formik.errors.email && (
-          <div className="my-2 bg-gray-200 border-l-4 border-green-500 text-gray-900 p-2">
+          <div data-cy='formik-email' className="my-2 bg-gray-200 border-l-4 border-green-500 text-gray-900 p-2">
             <span className='font-semibold'>{formik.errors.email}</span>
           </div>
         )}
@@ -39,6 +41,7 @@ const Login = () => {
           Password
         </label>
         <input
+          data-cy='input-password'
           onChange={handleChange}
           onBlur={handleBlur}
           value={values.password}
@@ -48,12 +51,13 @@ const Login = () => {
           className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
         />
         {formik.touched.password && formik.errors.password && (
-          <div className="my-2 bg-gray-200 border-l-4 border-green-500 text-gray-900 p-2">
+          <div data-cy='formik-password' className="my-2 bg-gray-200 border-l-4 border-green-500 text-gray-900 p-2">
             <span className='font-semibold'>{formik.errors.password}</span>
           </div>
         )}
       </div>
       <input
+        data-cy='submit-login'
         type="submit"
         className="bg-green-500 hover:bg-green-600 w-full p-3 border rounded text-white uppercase font-bold"
         value="Iniciar sesion"

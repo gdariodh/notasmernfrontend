@@ -23,12 +23,12 @@ const Notas = () => {
       {auth && user ? (
         <>
           {/** Componente de notas del usuario */}
-          <div className="bg-gray-200 h-screen flex flex-col">
+          <div data-cy='header' className="bg-gray-200 h-screen flex flex-col">
             {/**TODO: Header o panel del usuario donde estara algunos botones y logout de la sesion */}
             <Header user={user} />
             {/**  panel de notas */}
             <div className="w-full h-full flex-wrap shadow-inner">
-              <div className="p-2 mt-2 md:mt-4 bg-gray-200">
+              <div data-cy='list-notas' className="p-2 mt-2 md:mt-4 bg-gray-200">
                 {/**El Listado de todas las notas del usuario */}
                 <ListNotas />
               </div>

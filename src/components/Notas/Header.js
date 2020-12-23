@@ -35,7 +35,7 @@ const Header = ({ user,note }) => {
         <div className="mt-4 mr-4 md:mt-0 md:mr-0 ">
           <div className="flex md:flex-no-wrap">
           {
-            note !== 'true' ? <Link to="/crear-nota" type="button" className="mr-8 md:mr-12">
+            note !== 'true' ? <Link data-cy='crear-nota' to="/crear-nota" type="button" className="mr-8 md:mr-12">
               <BiPlus color="white" className="w-auto h-10" />
             </Link>  : <Link to="/notas" type="button" className="mr-8 md:mr-12">
               <BiShare color="white" className="w-auto h-10" />
@@ -43,7 +43,7 @@ const Header = ({ user,note }) => {
           }
             
             <div className="flex md:mr-12 mr-4 ">
-              <Link to="/" onClick={() => logoutUser()} type="button">
+              <Link data-cy='logout' to="/" onClick={() => logoutUser()} type="button">
                 <BiLogOut color="white" className="w-auto h-10" />
               </Link>
             </div>

@@ -19,17 +19,15 @@ const ListNotas = () => {
     <>
       {notas.length !== 0 ? (
         <>
-         
-            <div className="flex md:flex-wrap md:flex-row flex-col md:ml-20 m-2">
-              {notas.map((nota, i) => (
-                  <Nota nota={nota} key={`${nota._id}-${i}`} />
-              ))}
-            </div>
-     
+          <ul className="flex md:flex-wrap md:flex-row flex-col md:ml-20 m-2">
+            {notas.map((nota, i) => (
+              <Nota data-cy="list-notas" nota={nota} key={`${nota._id}-${i}`} />
+            ))}
+          </ul>
         </>
       ) : (
         <div className="flex justify-center mt-32 md:mt-40 ">
-          <Link to="/crear-nota" type="button">
+          <Link data-cy="crear-nota-icon" to="/crear-nota" type="button">
             <span className="font-semibold text-2xl md:text-3xl">
               Crea una nota
             </span>

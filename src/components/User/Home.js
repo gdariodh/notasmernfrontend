@@ -16,9 +16,9 @@ const Home = () => {
       </div>
       <div className="bg-gray-900 w-full h-full md:p-10 flex-wrap">
       <Alerta/>
-      <h1 className='text-white font-bold text-center text-4xl'>Inicia sesion</h1>
+      <h1 data-cy='titulo' className='text-white font-bold text-center text-4xl'>Inicia sesion</h1>
         <Login />
-        <Link to="/crear-cuenta" className='text-xl'>
+        <Link data-cy='nueva-cuenta' to="/crear-cuenta" className='text-xl'>
           <p className="text-white opacity-75 font-semibold mt-3 text-center">
             ¿Aún no tienes una cuenta? &#128561;
             <span className="font-bold text-white ml-2 underline">Crea una cuenta</span>

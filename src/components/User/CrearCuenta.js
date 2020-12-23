@@ -23,8 +23,9 @@ const Signup = () => {
         </div>
 
         <div className="bg-gray-900 w-full md:p-20 flex-wrap">
-        <Alerta/>
+        <Alerta />
           <form
+            data-cy='form-crearCuenta'
             className="bg-white rounded shadow-md px-8 pt-6 pb-8"
             onSubmit={handleSubmit}
           >
@@ -36,6 +37,7 @@ const Signup = () => {
                 Nombre
               </label>
               <input
+                data-cy='input-name'
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={name}
@@ -45,7 +47,7 @@ const Signup = () => {
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
               {formik.touched.name && formik.errors.name && (
-                <div className="my-2 bg-gray-200 border-l-4 border-green-500 text-gray-900 p-2">
+                <div data-cy='formik-name' className="my-2 bg-gray-200 border-l-4 border-green-500 text-gray-900 p-2">
                   <span className='font-semibold'>{formik.errors.name}</span>
                 </div>
               )}
@@ -59,6 +61,7 @@ const Signup = () => {
                 Email
               </label>
               <input
+                data-cy='input-email'
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={email}
@@ -68,7 +71,7 @@ const Signup = () => {
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
               {formik.touched.email && formik.errors.email && (
-                <div className="my-2 bg-gray-200 border-l-4 border-green-500 text-gray-900 p-2">
+                <div data-cy='formik-email' className="my-2 bg-gray-200 border-l-4 border-green-500 text-gray-900 p-2">
                   <span className='font-semibold'>{formik.errors.email}</span>
                 </div>
               )}
@@ -82,6 +85,7 @@ const Signup = () => {
                 Password
               </label>
               <input
+                data-cy='input-password'
                 onChange={handleChange}
                 onBlur={handleBlur}
                 value={password}
@@ -91,12 +95,13 @@ const Signup = () => {
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               />
               {formik.touched.password && formik.errors.password && (
-                <div className="my-2 bg-gray-200 border-l-4 border-green-500 text-gray-900 p-2">
+                <div data-cy='formik-password' className="my-2 bg-gray-200 border-l-4 border-green-500 text-gray-900 p-2">
                   <span className='font-semibold'>{formik.errors.password}</span>
                 </div>
               )}
             </div>
             <input
+              data-cy='input-submit'
               type="submit"
               className="bg-green-500 hover:bg-green-600 w-full p-3 border rounded text-white uppercase font-bold"
               value="Crear cuenta"

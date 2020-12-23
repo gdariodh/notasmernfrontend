@@ -46,7 +46,7 @@ const NotaCreate = () => {
                   </p>
 
                   {formik.touched.name && formik.errors.name && (
-                    <div className="flex justify-center my-2 text-red-600 p-2">
+                    <div date-cy='formik-name' className="flex justify-center my-2 text-red-600 p-2">
                       <span className="font-semibold">
                         {formik.errors.name}
                       </span>
@@ -55,6 +55,7 @@ const NotaCreate = () => {
                   <div className="flex justify-center mt-4 md:mt-0">
                     {/** Formulario */}
                     <form
+                      data-cy='form-crear-nota'
                       onSubmit={handleSubmit}
                       className="max-w-sm rounded  bg-yellow-300 shadow-lg md:m-4 mb-6  w-full md:w-1/3 h-full"
                     >
@@ -66,6 +67,7 @@ const NotaCreate = () => {
                           Nombre
                         </label>
                         <input
+                          data-cy='input-name'
                           onChange={handleChange}
                           onBlur={handleBlur}
                           value={values.name}
@@ -82,6 +84,7 @@ const NotaCreate = () => {
                           Contenido
                         </label>
                         <textarea
+                          data-cy='input-description'
                           onChange={handleChange}
                           onBlur={handleBlur}
                           value={values.description}
@@ -92,6 +95,7 @@ const NotaCreate = () => {
                       </div>
                       {values.name !== "" && (
                         <input
+                          data-cy='input-submit-crear-nota'
                           type="submit"
                           className="bg-yellow-300  w-full p-2 text-gray-900 uppercase font-semibold focus:outline-none"
                           value="Crear nota &#128204;"

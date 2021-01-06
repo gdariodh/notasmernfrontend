@@ -1,4 +1,4 @@
-# NOTAS MERN - Author: gdariodh 
+# NOTAS MERN - Autor: gdariodh 
 
 ## Frontend: Reactjs - Backend: Nodejs - DB: MongoDB 
 

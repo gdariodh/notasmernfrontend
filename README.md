@@ -1,6 +1,6 @@
-# NOTAS MERN 
+# NOTAS MERN - Author: gdariodh 
 
-## Author: gdariodh 
+## Frontend: Reactjs - Backend: Nodejs - DB: MongoDB 
 
 ### Link App: https://notasmern.vercel.app/
 
@@ -10,7 +10,7 @@
 - proteccion de rutas, sin usuario, no podras acceder al administrador de notas
 - Testing - End To End con Cypress. El Testing esta en cypress/integration
 
-Frontend: Reactjs - Backend: Nodejs - DB: MongoDB 
+
 
 
 
